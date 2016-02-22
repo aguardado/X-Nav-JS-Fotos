@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+     <title>Photo Random</title>
+     <script type="text/javascript" charset="utf-8">
+       function photo() {
+          var photos = [
+            'http://justsomething.co/wp-content/uploads/2014/04/most-adorable-animals-5.jpg',
+            'http://justsomething.co/wp-content/uploads/2014/04/most-adorable-animals-15.jpg',
+            'http://justsomething.co/wp-content/uploads/2014/04/most-adorable-animals-25.jpeg',
+            'http://justsomething.co/wp-content/uploads/2014/04/most-adorable-animals-32.jpeg',
+            'http://justsomething.co/wp-content/uploads/2014/04/most-adorable-animals-19.jpg',
+            'http://justsomething.co/wp-content/uploads/2014/04/most-adorable-animals-20.jpg'
+          ]
+          element = document.getElementById('tag');
+          photoURL = photos[Math.floor(Math.random()*photos.length)]
+          element.innerHTML = '<img src="' + photoURL + '">';
+       }
+     </script>
+   </head>
+   <body>
+     <p>Do you want to see some photos? <a href="javascript:photo()">Just click here!</a></p>
+     <span id="tag"></span>
+   </body>
+</html>
